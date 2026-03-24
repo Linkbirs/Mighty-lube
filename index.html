@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MIGHTY LUBE | Systematic Lubrication</title>
-
+<title>OPCO + Mighty Lube</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -21,14 +20,70 @@ body{
   font-family:'Montserrat',sans-serif;
   background:#ffffff;
   color:var(--texto);
-  line-height:1.6;
 }
 
-/* ===== HEADER ===== */
-header{
+/* OPCO HEADER */
+header.opco{
+  text-align:center;
+  padding:30px 20px;
+  border-bottom:1px solid #eee;
+}
+
+header.opco h1{
+  color:var(--azul);
+  font-weight:800;
+}
+
+header.opco img{
+  width:120px;
+  margin-top:10px;
+}
+
+.section{
+  max-width:1200px;
+  margin:40px auto;
+  padding:0 20px;
+}
+
+.buttons{
+  display:grid;
+  gap:15px;
+}
+
+button{
+  padding:14px;
+  border:none;
+  border-radius:10px;
+  background:var(--azul);
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  background:var(--azul-claro);
+}
+
+.divider{
+  height:1px;
+  background:#ddd;
+  margin:40px 0;
+}
+
+iframe{
+  width:100%;
+  height:300px;
+  border:none;
+  border-radius:12px;
+}
+
+/* ===== MIGHTY LUBE ORIGINAL ===== */
+header.mighty{
   background:#ffffff;
   border-bottom:1px solid #e6e9ee;
   padding:26px 20px;
+  margin-top:80px;
 }
 
 .header-wrap{
@@ -39,19 +94,12 @@ header{
   justify-content:center;
 }
 
-.logo{
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
-
 .logo span{
   font-weight:800;
   color:var(--azul);
   font-size:1.2rem;
 }
 
-/* ===== HERO ===== */
 .hero{
   max-width:1200px;
   margin:50px auto 30px;
@@ -71,13 +119,6 @@ header{
   color:#555;
 }
 
-/* ===== SECCIÓN ===== */
-.section{
-  max-width:1200px;
-  margin:70px auto;
-  padding:0 20px;
-}
-
 .section-title{
   text-align:center;
   margin-bottom:40px;
@@ -94,7 +135,6 @@ header{
   color:#555;
 }
 
-/* ===== BLOQUE PRODUCTO ===== */
 .product-block{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -143,7 +183,6 @@ header{
   font-weight:bold;
 }
 
-/* ===== GALERÍA ===== */
 .gallery{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -170,7 +209,6 @@ header{
   cursor:zoom-in;
 }
 
-/* ===== SERIES ===== */
 .series{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -202,25 +240,40 @@ header{
   font-size:1rem;
 }
 
-/* ===== FOOTER ===== */
-footer{
-  border-top:1px solid #e6e9ee;
-  padding:40px 20px;
-  text-align:center;
-  font-size:.85rem;
-  color:#666;
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:480px){
-  .hero h1{font-size:1.8rem}
-}
 </style>
 </head>
 
 <body>
 
-<header>
+<!-- OPCO -->
+<header class="opco">
+  <h1>OPCO</h1>
+  <img src="unnamed.jpg">
+</header>
+
+<div class="section">
+
+<div class="buttons">
+<button onclick="openLink('https://drive.google.com/file/d/1c-MZilHDq5kiFziDDTSz86thDrNP4aH-/preview')">Introducción a la Lubricación</button>
+<button onclick="openLink('https://drive.google.com/file/d/1pkx7-ki_dt2fKqsoPbu4n0YgDFJ-TaqC/preview')">Monitoreo Mighty Lube</button>
+<button onclick="openLink('https://drive.google.com/file/d/1Uq6Ki7YZxUyw8Fw0F2HQDL-ucgXBlK1e/preview')">Guía de Soluciones</button>
+</div>
+
+<div id="viewer" style="margin-top:20px;"></div>
+
+<div class="divider"></div>
+
+<div class="buttons">
+<button onclick="window.open('https://sites.google.com/view/mul-t-shot-bomba/p%C3%A1gina-principal')">Bomba</button>
+<button onclick="window.open('https://sites.google.com/view/opcoengrasadoresderuedadetrans/p%C3%A1gina-principal')">OPCO® ENGRASADORES DE RUEDA DE TRANSPORTADOR AUTOMÁTICOS</button>
+<button onclick="window.open('https://sites.google.com/view/opcolubricadorestotalmenteelct/p%C3%A1gina-principal')">OPCO® LUBRICADORES TOTALMENTE ELÉCTRICOS Y AUTOMÁTICOS</button>
+<button onclick="window.open('https://sites.google.com/view/opcolimpiadoresdetransportador/p%C3%A1gina-principal')">OPCO® LIMPIADORES DE TRANSPORTADORES (MOTORIZADO)</button>
+</div>
+
+</div>
+
+<!-- MIGHTY LUBE COMPLETO -->
+<header class="mighty">
   <div class="header-wrap">
     <div class="logo">
       <span>MIGHTY LUBE</span>
@@ -238,97 +291,70 @@ footer{
 
 <section class="section">
 
-  <!-- BLOQUE PRINCIPAL -->
-  <div class="product-block">
-    <div class="product-image">
-      <img src="https://i.ibb.co/DP2tymYB/Imagen1.png">
-    </div>
+<div class="product-block">
+<div class="product-image">
+<img src="https://i.ibb.co/DP2tymYB/Imagen1.png">
+</div>
 
-    <div class="product-info">
-      <h3>Sistemas de Suministro con Tanque Integrado</h3>
-      <ul>
-        <li>Interfaz de usuario completamente programable</li>
-        <li>Fuente de energía y lubricante integradas</li>
-        <li>Protección interna en rieles modificados</li>
-        <li>Control preciso del flujo de lubricación</li>
-      </ul>
-    </div>
-  </div>
+<div class="product-info">
+<h3>Sistemas de Suministro con Tanque Integrado</h3>
+<ul>
+<li>Interfaz de usuario completamente programable</li>
+<li>Fuente de energía y lubricante integradas</li>
+<li>Protección interna en rieles modificados</li>
+<li>Control preciso del flujo de lubricación</li>
+</ul>
+</div>
+</div>
 
-  <!-- GALERÍA -->
-  <div class="section-title">
-    <h2>Equipos Mighty Lube</h2>
-    <p>Configuraciones y sistemas disponibles</p>
-  </div>
+<div class="section-title">
+<h2>Equipos Mighty Lube</h2>
+<p>Configuraciones y sistemas disponibles</p>
+</div>
 
-  <div class="gallery">
-    <div class="gallery-item"><img src="IM11.png"></div>
-    <div class="gallery-item"><img src="Imagen12.png"></div>
-    <div class="gallery-item"><img src="Imagen13.png"></div>
-    <div class="gallery-item"><img src="Imagen13.png"></div>
-  </div>
+<div class="gallery">
+<div class="gallery-item"><img src="IM11.png"></div>
+<div class="gallery-item"><img src="Imagen12.png"></div>
+<div class="gallery-item"><img src="Imagen13.png"></div>
+<div class="gallery-item"><img src="Imagen13.png"></div>
+</div>
 
-  <!-- SERIES -->
-  <div class="section-title" style="margin-top:70px">
-    <h2>Lubricadores para Transportadores</h2>
-    <p>Power & Free con Sistema Central</p>
-  </div>
+<div class="section-title" style="margin-top:70px">
+<h2>Lubricadores para Transportadores</h2>
+<p>Power & Free con Sistema Central</p>
+</div>
 
-  <div class="series">
-    <div class="series-card">
-      <img src="IM1.png">
-      <h4>9500L Series</h4>
-    </div>
-    <div class="series-card">
-      <img src="IM2.png">
-      <h4>9500I Series</h4>
-    </div>
-  </div>
+<div class="series">
+<div class="series-card">
+<img src="IM1.png">
+<h4>9500L Series</h4>
+</div>
+<div class="series-card">
+<img src="IM2.png">
+<h4>9500I Series</h4>
+</div>
+</div>
+
+<!-- VIDEOS -->
+<div style="margin-top:60px; display:grid; gap:20px;">
+<iframe src="https://www.youtube.com/embed/K9MFjwYq30s"></iframe>
+<iframe src="https://www.youtube.com/embed/cMXQfGi-0NQ"></iframe>
+<iframe src="https://www.youtube.com/embed/CvsO3pTCCf8"></iframe>
+</div>
 
 </section>
 
 <script>
-/* APARICIÓN BLOQUE */
+function openLink(url){
+ document.getElementById('viewer').innerHTML = `<iframe src="${url}"></iframe>`;
+}
+
 const blocks=document.querySelectorAll('.product-block');
 const obs=new IntersectionObserver(e=>{
-  e.forEach(i=>i.isIntersecting&&i.target.classList.add('visible'))
+ e.forEach(i=>i.isIntersecting&&i.target.classList.add('visible'))
 },{threshold:.2});
 blocks.forEach(b=>obs.observe(b));
 
-/* ===== LIGHTBOX (SIN TOCAR HTML) ===== */
-document.querySelectorAll(
-  '.gallery-item img, .series-card img, .product-image img'
-).forEach(img=>{
-  img.addEventListener('click',()=>{
-    const overlay=document.createElement('div');
-    overlay.style.cssText=`
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,.85);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      z-index:9999;
-      padding:20px;
-    `;
-
-    const big=document.createElement('img');
-    big.src=img.src;
-    big.style.cssText=`
-      max-width:100%;
-      max-height:100%;
-      object-fit:contain;
-      border-radius:14px;
-      box-shadow:0 30px 60px rgba(0,0,0,.6);
-      cursor:zoom-out;
-    `;
-
-    overlay.appendChild(big);
-    document.body.appendChild(overlay);
-
-    overlay.addEventListener('click',()=>overlay.remove());
-  });
-});
 </script>
 
 </body>
